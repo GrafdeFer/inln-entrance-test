@@ -21,7 +21,7 @@ class MessagesList extends Component {
     super(props)
     this.state = {
       currentPage: 1,
-      rows: 9,
+      rows: 7,
     }
   }
 

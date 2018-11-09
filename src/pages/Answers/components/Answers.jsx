@@ -71,15 +71,6 @@ class Answers extends Component {
             author={receiver}
           />
         )
-      } else {
-        result.push(
-          <Message
-            key={i}
-            message={message}
-            authorized={authorized}
-            author={receiver}
-          />
-        )
       }
     }
     return result
