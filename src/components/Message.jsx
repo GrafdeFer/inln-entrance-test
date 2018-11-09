@@ -75,11 +75,12 @@ class Message extends Component {
     })
   }
 
-  responseControl = () => {
-    const { authorized, classes } = this.props
+  responseControl = receiver => {
+    const { authorized, classes, author } = this.props
     const { editable, message } = this.state
-    return (
-      authorized && (
+    const notYou = this.isNotYourMessage(receiver, author)
+    if (notYou && authorized) {
+      return (
         <div className={classes.response}>
           {editable && (
             <TextField
@@ -107,7 +108,15 @@ class Message extends Component {
           )}
         </div>
       )
-    )
+    }
+  }
+
+  isNotYourMessage = (author, receiver) => {
+    if (author !== receiver) {
+      return true
+    } else {
+      return false
+    }
   }
 
   render() {
@@ -129,7 +138,7 @@ class Message extends Component {
           {message.receiver ? `${message.receiver}, ` : undefined}
           {message.text}
         </Typography>
-        {this.responseControl()}
+        {this.responseControl(message.author)}
       </Paper>
     )
   }

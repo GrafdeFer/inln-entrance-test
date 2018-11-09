@@ -23,7 +23,12 @@ const renderMessages = (messages, receiver, authorized) => {
       )
     } else {
       return (
-        <Message key={message.date} message={message} authorized={authorized} />
+        <Message
+          key={message.date}
+          message={message}
+          authorized={authorized}
+          author={receiver}
+        />
       )
     }
   })
