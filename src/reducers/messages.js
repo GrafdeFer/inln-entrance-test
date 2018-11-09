@@ -3,14 +3,14 @@ export const initialState = {
     {
       text: 'Hi dude!',
       date: '9 нояб. 2018 г., 14:49:24',
-      author: 'Den',
-      receiver: 'Stanislav',
+      author: 'user1',
+      receiver: 'user2',
     },
     {
       text: 'Hello dude!',
       date: '9 нояб. 2018 г., 14:49:25',
-      author: 'Jack',
-      receiver: 'Den',
+      author: 'user3',
+      receiver: 'user1',
     },
   ],
 }

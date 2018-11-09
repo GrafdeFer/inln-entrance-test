@@ -1,6 +1,6 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import Message from '../../../components/Message'
+import Message from '../../../components/MessageContainer'
 
 const styles = theme => ({
   root: {
@@ -9,23 +9,33 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
 })
 
-const renderMessages = (messages, receiver) => {
+const renderMessages = (messages, receiver, authorized) => {
   return messages.map(message => {
     if (isMessageForYou(message.receiver, receiver)) {
-      return <Message key={message.date} message={message} forYou />
+      return (
+        <Message
+          key={message.date}
+          message={message}
+          authorized={authorized}
+          forYou
+          author={receiver}
+        />
+      )
     } else {
-      return <Message key={message.date} message={message} />
+      return (
+        <Message key={message.date} message={message} authorized={authorized} />
+      )
     }
   })
 }
 
 const isMessageForYou = (receiver, user) => (receiver === user ? true : false)
 
-const MessagesList = ({ classes, messages, receiver }) => {
+const MessagesList = ({ classes, messages, receiver, authorized }) => {
   return (
     <div className={classes.root}>
       <div className={classes.toolbar} />
-      <div>{renderMessages(messages, receiver)}</div>
+      <div>{renderMessages(messages, receiver, authorized)}</div>
     </div>
   )
 }

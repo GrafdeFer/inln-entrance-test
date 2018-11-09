@@ -1,7 +1,8 @@
 export default function(payload) {
   const usersData = {
-    login: { password: 'lol', token: '123456' },
-    lol: { password: 'lol', token: '456789' },
+    user1: { password: 'lol' },
+    user2: { password: 'lol' },
+    user3: { password: 'lol' },
   }
   const login = payload.login
   const password = payload.password
@@ -10,7 +11,6 @@ export default function(payload) {
       return {
         status: 200,
         text: 'Success!',
-        token: usersData[login].token,
         login: login,
       }
     } else {
