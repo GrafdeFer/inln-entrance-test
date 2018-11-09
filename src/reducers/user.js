@@ -1,13 +1,22 @@
 export const initialState = {
-  authorized: true,
-  login: 'Stanislav',
+  authorized: false,
+  login: '',
+  token: '',
 }
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case 'LOG_IN':
+    case 'LOGIN_SUCCESS':
       return {
-        state,
+        authorized: true,
+        login: action.payload.login,
+        token: action.payload.token,
+      }
+    case 'LOGIN_FAILED':
+      return {
+        authorized: false,
+        login: '',
+        token: '',
       }
     default:
       return state

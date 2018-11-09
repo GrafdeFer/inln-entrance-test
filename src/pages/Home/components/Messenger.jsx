@@ -5,19 +5,6 @@ import { withStyles } from '@material-ui/core/styles'
 import currentDate from '../../../helpers/currentDate'
 
 const styles = theme => ({
-  root: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    border: '1px solid #888',
-    padding: 20,
-    borderRadius: 5,
-    minWidth: 300,
-  },
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,

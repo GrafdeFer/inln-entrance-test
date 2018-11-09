@@ -14,9 +14,9 @@ const DrawerContent = ({ classes }) => {
       <div className={classes.toolbar} />
       <Divider />
       <List component="nav">
-        <LinkButton name="Написать сообщение" path="/" />
-        <LinkButton name="Все сообщения" path="/board" />
-        <LinkButton name="Ответы" path="/" />
+        <LinkButton name="Все сообщения" path="/" />
+        <LinkButton name="Написать сообщение" path="/messenger" />
+        <LinkButton name="Ответы" path="/answers" />
       </List>
     </div>
   )

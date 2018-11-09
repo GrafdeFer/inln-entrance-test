@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { sendMessage } from '../actions'
-import MsgSender from './MsgSender'
+import Messenger from './Messenger'
 
 const mapStateToProps = state => ({
   login: state.user.login,
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MsgSender)
+)(Messenger)

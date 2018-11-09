@@ -1,8 +1,8 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import MsgSenderContainer from './MsgSenderContainer'
-import NavigationDrawer from '../../../components/NavigationDrawer'
-import ApplicationBar from '../../../components/ApplicationBar'
+import MessengerContainer from './MessengerContainer'
+import NavigationDrawer from '../../../components/NavigationDrawerContainer'
+import ApplicationBar from '../../../components/ApplicationBarContainer'
 
 const styles = {
   root: {
@@ -15,7 +15,7 @@ const Home = ({ classes }) => {
     <div className={classes.root}>
       <ApplicationBar />
       <NavigationDrawer />
-      <MsgSenderContainer />
+      <MessengerContainer />
     </div>
   )
 }
