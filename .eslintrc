@@ -20,5 +20,6 @@
     "no-unused-vars": "error",
     "no-console": "warn",
     "react/prop-types": 0
-  }
+  },
+  "parser": "babel-eslint"
 }
