@@ -35,6 +35,10 @@ const styles = {
     width: 25,
     height: 25,
   },
+  response: {
+    display: 'flex',
+    alignItems: 'baseline',
+  },
 }
 
 class Message extends Component {
@@ -65,15 +69,18 @@ class Message extends Component {
       author: this.props.author,
       receiver: this.props.message.author,
     })
+    this.setState({
+      editable: false,
+      message: '',
+    })
   }
 
   responseControl = () => {
-    const { authorized } = this.props
+    const { authorized, classes } = this.props
     const { editable, message } = this.state
     return (
       authorized && (
-        <div>
-          <Button onClick={this.changeEditable}>Ответить</Button>
+        <div className={classes.response}>
           {editable && (
             <TextField
               onChange={this.handleInput}
@@ -84,7 +91,20 @@ class Message extends Component {
               value={message}
             />
           )}
-          {editable && <Button onClick={this.handleSubmit}>Отправить</Button>}
+          {editable && (
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={this.handleSubmit}
+            >
+              Отправить
+            </Button>
+          )}
+          {!editable && (
+            <Button color="primary" onClick={this.changeEditable}>
+              Ответить
+            </Button>
+          )}
         </div>
       )
     )
