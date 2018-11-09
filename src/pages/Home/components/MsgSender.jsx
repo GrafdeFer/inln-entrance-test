@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
+import currentDate from '../../../helpers/currentDate'
 
 const styles = theme => ({
   root: {
@@ -29,7 +30,6 @@ class MessageSender extends Component {
     super(props)
     this.state = {
       message: '',
-      recipient: null,
     }
   }
 
@@ -40,15 +40,16 @@ class MessageSender extends Component {
   }
 
   handleSubmit = () => {
-    const { sendMessage } = this.props
-    const { message, recipient } = this.state
+    const { sendMessage, login } = this.props
+    const { message } = this.state
     sendMessage({
       text: message,
-      recipient: recipient,
+      date: currentDate(),
+      author: login,
+      receiver: null,
     })
     this.setState({
       message: '',
-      recipient: null,
     })
   }
 

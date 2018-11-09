@@ -17,13 +17,24 @@ const styles = theme => ({
   header: {
     flexGrow: 1,
   },
+  menuButton: {
+    marginRight: 20,
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
 })
 
-const ApplicationBar = ({ classes }) => {
+const ApplicationBar = ({ classes, switchDrawer }) => {
   return (
     <AppBar className={classes.root} position="fixed">
       <Toolbar>
-        <IconButton color="inherit" aria-label="Menu">
+        <IconButton
+          color="inherit"
+          aria-label="Menu"
+          className={classes.menuButton}
+          onClick={switchDrawer}
+        >
           <MenuIcon />
         </IconButton>
         <Typography variant="title" color="inherit" className={classes.header}>

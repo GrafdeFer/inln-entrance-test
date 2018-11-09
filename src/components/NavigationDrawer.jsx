@@ -16,7 +16,7 @@ const styles = theme => ({
   },
 })
 
-const NavigationDrawer = ({ classes, open }) => {
+const NavigationDrawer = ({ classes, show, switchDrawer }) => {
   return (
     <div className={classes.drawer}>
       <Hidden xsDown implementation="css">
@@ -33,10 +33,11 @@ const NavigationDrawer = ({ classes, open }) => {
       <Hidden smUp implementation="css">
         <Drawer
           variant="temporary"
-          open={open}
+          open={show}
           classes={{
             paper: classes.drawerPaper,
           }}
+          onClose={switchDrawer}
         >
           <DrawerContent />
         </Drawer>

@@ -2,6 +2,10 @@ import { connect } from 'react-redux'
 import { sendMessage } from '../actions'
 import MsgSender from './MsgSender'
 
+const mapStateToProps = state => ({
+  login: state.user.login,
+})
+
 const mapDispatchToProps = dispatch => {
   return {
     sendMessage: message => dispatch(sendMessage(message)),
@@ -9,6 +13,6 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(MsgSender)

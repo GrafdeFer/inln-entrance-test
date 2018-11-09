@@ -3,6 +3,7 @@ import MessagesList from './MessagesList'
 
 const mapStateToProps = state => ({
   messages: state.messages.messages,
+  receiver: state.user.login,
 })
 
 export default connect(

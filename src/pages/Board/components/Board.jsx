@@ -1,7 +1,7 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import NavigationDrawer from '../../../components/NavigationDrawer'
-import ApplicationBar from '../../../components/ApplicationBar'
+import NavigationDrawer from '../../../components/NavigationDrawerContainer'
+import ApplicationBar from '../../../components/ApplicationBarContainer'
 import MessagesListContainer from './MessagesListContainer'
 
 const styles = {
