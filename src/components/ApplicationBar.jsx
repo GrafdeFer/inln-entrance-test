@@ -37,7 +37,7 @@ const ApplicationBar = ({ classes, switchDrawer }) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="title" color="inherit" className={classes.header}>
-          Messages
+          Стена
         </Typography>
       </Toolbar>
     </AppBar>

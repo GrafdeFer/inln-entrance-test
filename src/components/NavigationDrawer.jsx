@@ -16,7 +16,13 @@ const styles = theme => ({
   },
 })
 
-const NavigationDrawer = ({ classes, show, switchDrawer }) => {
+const NavigationDrawer = ({
+  classes,
+  show,
+  switchDrawer,
+  user,
+  authorized,
+}) => {
   return (
     <div className={classes.drawer}>
       <Hidden xsDown implementation="css">
@@ -27,7 +33,7 @@ const NavigationDrawer = ({ classes, show, switchDrawer }) => {
             paper: classes.drawerPaper,
           }}
         >
-          <DrawerContent />
+          <DrawerContent user={user} authorized={authorized} />
         </Drawer>
       </Hidden>
       <Hidden smUp implementation="css">
@@ -39,7 +45,7 @@ const NavigationDrawer = ({ classes, show, switchDrawer }) => {
           }}
           onClose={switchDrawer}
         >
-          <DrawerContent />
+          <DrawerContent user={user} authorized={authorized} />
         </Drawer>
       </Hidden>
     </div>

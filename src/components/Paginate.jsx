@@ -14,11 +14,11 @@ const Paginate = ({ classes, next, prev, current }) => {
   return (
     <div className={classes.root}>
       <Button variant="contained" color="primary" onClick={prev}>
-        Prev
+        Сюда
       </Button>
       {current}
       <Button variant="contained" color="primary" onClick={next}>
-        Next
+        Туда
       </Button>
     </div>
   )

@@ -4,6 +4,8 @@ import { switchDrawer } from '../actions/settings'
 
 const mapStateToProps = state => ({
   show: state.settings.showDrawer,
+  user: state.user.login,
+  authorized: state.user.authorized,
 })
 
 const mapDispatchToProps = dispatch => {

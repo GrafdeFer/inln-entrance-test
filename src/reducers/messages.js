@@ -12,6 +12,72 @@ export const initialState = {
       author: 'user3',
       receiver: 'user1',
     },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
+    {
+      text: 'Hello dude!',
+      date: '9 нояб. 2018 г., 14:49:25',
+      author: 'user3',
+      receiver: 'user1',
+    },
   ],
 }
 

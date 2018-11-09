@@ -11,7 +11,7 @@ const styles = theme => ({
   content: {
     display: 'flex',
     flexDirection: 'column',
-    height: 'calc(100vh - 64px)',
+    height: 'calc(100vh - 67px)',
     justifyContent: 'space-between',
   },
 })
@@ -59,7 +59,7 @@ class MessagesList extends Component {
       if (this.isMessageForYou(message.receiver, receiver)) {
         result.push(
           <Message
-            key={message.date}
+            key={i}
             message={message}
             authorized={authorized}
             forYou
@@ -69,7 +69,7 @@ class MessagesList extends Component {
       } else {
         result.push(
           <Message
-            key={message.date}
+            key={i}
             message={message}
             authorized={authorized}
             author={receiver}
