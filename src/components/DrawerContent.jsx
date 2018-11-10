@@ -10,7 +10,7 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
 })
 
-const DrawerContent = ({ classes, authorized, user }) => {
+const DrawerContent = ({ classes, authorized, user, close }) => {
   return (
     <div>
       <div className={classes.toolbar} />
@@ -20,12 +20,12 @@ const DrawerContent = ({ classes, authorized, user }) => {
           <ListItemText>{user}</ListItemText>
         </ListItem>
       )}
-      {!authorized && <LinkButton name="Войти" path="/login" />}
+      {!authorized && <LinkButton name="Войти" path="/login" close={close} />}
       <Divider />
       <List component="nav">
-        <LinkButton name="Все сообщения" path="/" />
-        <LinkButton name="Написать сообщение" path="/messenger" />
-        <LinkButton name="Ответы" path="/answers" />
+        <LinkButton name="Все сообщения" path="/" close={close} />
+        <LinkButton name="Написать сообщение" path="/messenger" close={close} />
+        <LinkButton name="Ответы" path="/answers" close={close} />
       </List>
     </div>
   )

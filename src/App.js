@@ -13,7 +13,12 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={Board.components.Board} />
+          <Route
+            exact
+            path="/"
+            component={Board.components.Board}
+            title="asd"
+          />
           <PrivateRoute path="/messenger" component={Home.components.Home} />
           <PrivateRoute
             path="/answers"

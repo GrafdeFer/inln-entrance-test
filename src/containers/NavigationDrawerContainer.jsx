@@ -1,6 +1,12 @@
 import { connect } from 'react-redux'
+import NavigationDrawer from '../components/NavigationDrawer'
 import { switchDrawer } from '../actions/settings'
-import ApplicationBar from './ApplicationBar'
+
+const mapStateToProps = state => ({
+  show: state.settings.showDrawer,
+  user: state.user.login,
+  authorized: state.user.authorized,
+})
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -9,6 +15,6 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
-)(ApplicationBar)
+)(NavigationDrawer)

@@ -45,7 +45,11 @@ const NavigationDrawer = ({
           }}
           onClose={switchDrawer}
         >
-          <DrawerContent user={user} authorized={authorized} />
+          <DrawerContent
+            user={user}
+            authorized={authorized}
+            close={switchDrawer}
+          />
         </Drawer>
       </Hidden>
     </div>

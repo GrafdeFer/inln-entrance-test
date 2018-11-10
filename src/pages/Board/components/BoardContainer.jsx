@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import MessagesList from './MessagesList'
+import Board from './Board'
 
 const mapStateToProps = state => ({
   messages: state.messages.messages,
@@ -10,4 +10,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   null
-)(MessagesList)
+)(Board)

@@ -24,7 +24,7 @@ const styles = theme => ({
   },
 })
 
-const ApplicationBar = ({ classes, switchDrawer }) => {
+const ApplicationBar = ({ classes, switchDrawer, title }) => {
   return (
     <AppBar className={classes.root} position="fixed">
       <Toolbar>
@@ -37,7 +37,7 @@ const ApplicationBar = ({ classes, switchDrawer }) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="title" color="inherit" className={classes.header}>
-          Стена
+          {title}
         </Typography>
       </Toolbar>
     </AppBar>

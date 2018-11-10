@@ -121,6 +121,7 @@ class Message extends Component {
 
   render() {
     const { message, classes, forYou } = this.props
+    const random = Math.floor(Math.random() * (9 - 1) + 1)
     return (
       <Paper className={forYou ? classes.forYou : classes.root}>
         <div className={classes.header}>
@@ -128,7 +129,7 @@ class Message extends Component {
             <Avatar
               className={classes.avatar}
               alt="Adelle Charles"
-              src="https://cataas.com/cat"
+              src={`http://lorempixel.com/output/cats-q-c-40-40-${random}.jpg`}
             />
             <Typography variant="h6">{message.author}</Typography>
           </div>

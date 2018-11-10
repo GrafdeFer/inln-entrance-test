@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/core/styles'
 import { Redirect } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import NavigationDrawer from '../../../components/NavigationDrawerContainer'
-import ApplicationBar from '../../../components/ApplicationBarContainer'
+import NavigationDrawer from '../../../containers/NavigationDrawerContainer'
+import ApplicationBar from '../../../containers/ApplicationBarContainer'
 
 const styles = theme => ({
   root: {
@@ -60,7 +60,7 @@ class Login extends Component {
     }
     return (
       <div className={classes.root}>
-        <ApplicationBar />
+        <ApplicationBar title="Войти" />
         <NavigationDrawer />
         <div className={classes.content}>
           <div className={classes.toolbar} />

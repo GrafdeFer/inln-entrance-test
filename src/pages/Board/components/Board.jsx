@@ -1,21 +1,39 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import NavigationDrawer from '../../../components/NavigationDrawerContainer'
-import ApplicationBar from '../../../components/ApplicationBarContainer'
-import MessagesListContainer from './MessagesListContainer'
+import NavigationDrawer from '../../../containers/NavigationDrawerContainer'
+import ApplicationBar from '../../../containers/ApplicationBarContainer'
+import MessagesList from '../../../components/MessagesList'
 
-const styles = {
+const styles = theme => ({
   root: {
     display: 'flex',
   },
-}
+  messages: {
+    width: '100%',
+  },
+  toolbar: theme.mixins.toolbar,
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: 'calc(100vh - 67px)',
+    justifyContent: 'space-between',
+  },
+})
 
-const Board = ({ classes }) => {
+const Board = ({ classes, messages, receiver, authorized }) => {
   return (
     <div className={classes.root}>
-      <ApplicationBar />
+      <ApplicationBar title="Стена" />
       <NavigationDrawer />
-      <MessagesListContainer />
+      <div className={classes.messages}>
+        <div className={classes.toolbar} />
+        <MessagesList
+          messages={messages}
+          receiver={receiver}
+          authorized={authorized}
+          all
+        />
+      </div>
     </div>
   )
 }
