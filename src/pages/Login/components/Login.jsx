@@ -52,7 +52,7 @@ class Login extends Component {
   }
 
   render() {
-    const { classes, location } = this.props
+    const { classes, location, error } = this.props
     const { login, password, redirectToPreviousRoute } = this.state
     const { from } = location.state || { from: { pathname: '/' } }
     if (redirectToPreviousRoute) {
@@ -95,6 +95,7 @@ class Login extends Component {
             >
               Отправить
             </Button>
+            {error ? <p>{error}</p> : undefined}
           </div>
         </div>
       </div>
