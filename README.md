@@ -1,5 +1,7 @@
 ## Тестовое задание.
 
+[Демо](https://grafdefer.github.io/inln-entrance-test/#/)
+
 Возможности:
 
 - авторизация
